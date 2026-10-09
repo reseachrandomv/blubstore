@@ -1,0 +1,10 @@
+[
+  {"id":"jacket","name":"Harbour Jacket","description":"Sand cotton twill","image":"assets/products/jacket.png","priceUSD":148,"priceINR":12499,"priceMVR":2280,"badge":"Flagship","inStock":true},
+  {"id":"tee","name":"Cloud Tee","description":"Heavyweight organic cotton","image":"assets/products/tee.png","priceUSD":38,"priceINR":3199,"priceMVR":590,"inStock":true},
+  {"id":"hoodie","name":"Deep Blue Hoodie","description":"Brushed loopback fleece","image":"assets/products/hoodie.png","priceUSD":84,"priceINR":6999,"priceMVR":1300,"badge":"New","inStock":true},
+  {"id":"jeans","name":"Tide Straight Jean","description":"14oz rinse denim","image":"assets/products/jeans.png","priceUSD":96,"priceINR":7999,"priceMVR":1480,"inStock":true},
+  {"id":"dress","name":"Mist Midi Dress","description":"Washed linen blend","image":"assets/products/dress.png","priceUSD":118,"priceINR":9999,"priceMVR":1820,"badge":"New","inStock":true},
+  {"id":"cap","name":"Navy Six-Panel Cap","description":"Cotton twill, adjustable","image":"assets/products/cap.png","priceUSD":32,"priceINR":2699,"priceMVR":495,"inStock":true},
+  {"id":"sneakers","name":"Ripple Sneaker","description":"Leather upper, gum-free sole","image":"assets/products/sneakers.png","priceUSD":124,"priceINR":10499,"priceMVR":1910,"inStock":true},
+  {"id":"tote","name":"Market Tote","description":"Natural canvas","image":"assets/products/tote.png","priceUSD":44,"priceINR":3699,"priceMVR":680,"inStock":true}
+]

@@ -1,0 +1,124 @@
+# Pages CMS config — https://pagescms.org/docs/
+# Assumes the repository root is this site folder (index.html sits next to this file).
+media:
+  - name: products
+    label: Product photos
+    input: assets/products
+    output: assets/products
+    categories: [image]
+    rename: safe
+
+content:
+  - name: products
+    label: Products
+    type: file
+    path: content/products.json
+    format: json
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{name} — ${priceUSD}"
+    fields:
+      - name: id
+        label: Product ID
+        type: string
+        required: true
+        description: "Short code, lowercase, no spaces (e.g. linen-shirt). Must be unique. Don't change it after orders start."
+        pattern:
+          regex: "^[a-z0-9-]+$"
+          message: "Lowercase letters, numbers and dashes only"
+      - name: name
+        label: Name
+        type: string
+        required: true
+      - name: description
+        label: Short description
+        type: text
+      - name: image
+        label: Photo
+        type: image
+        description: "Square photo on a plain light background works best (about 1200×1200)."
+        options:
+          media: products
+          extensions: [png, jpg, jpeg, webp]
+      - name: priceUSD
+        label: Price (USD $)
+        type: number
+        required: true
+        options: { min: 0 }
+      - name: priceINR
+        label: Price (INR ₹)
+        type: number
+        required: true
+        options: { min: 0 }
+      - name: priceMVR
+        label: Price (MVR)
+        type: number
+        required: true
+        options: { min: 0 }
+      - name: badge
+        label: Badge
+        type: select
+        description: "Optional label on the photo. 'Sold out' also turns off Add to bag."
+        options:
+          values: [New, Flagship, Sold out]
+      - name: inStock
+        label: In stock
+        type: boolean
+        default: true
+        description: "Switch off to show the item as sold out."
+
+  - name: site
+    label: Site text
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - name: hero
+        label: Top of page (hero)
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small line above headline
+            type: string
+          - name: headline
+            label: Headline
+            type: string
+            description: "Wrap a word in *stars* to make it blue italic, e.g. Soft *blue* everyday."
+          - name: subtext
+            label: Text under headline
+            type: text
+      - name: story
+        label: Scroll story (flagship product)
+        type: object
+        fields:
+          - name: productId
+            label: Flagship product ID
+            type: string
+            description: "The Product ID (from Products) shown at the end of the scroll story."
+          - name: image
+            label: Story image
+            type: image
+            options:
+              media: products
+          - name: specs
+            label: Detail cards
+            type: object
+            list: { max: 4 }
+            fields:
+              - name: title
+                type: string
+              - name: text
+                type: text
+      - name: about
+        label: About section
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+            description: "Wrap words in *stars* for blue italic."
+          - name: paragraphs
+            label: Paragraphs
+            type: text
+            list: true

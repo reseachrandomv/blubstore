@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blubstore — Soft-blue essentials by Lisa Marak</title>
+<meta name="description" content="Blubstore: considered clothing essentials, owned and curated by Lisa Marak.">
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="hdr">
+  <nav class="hdr-left">
+    <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    <div class="links"><a href="#top">Home</a><a href="#shop">Shop</a><a href="#about">About</a></div>
+  </nav>
+  <a class="logo" href="#top" aria-label="Blubstore home"><img src="assets/logo.svg" alt="Blubstore" width="172" height="36"></a>
+  <div class="hdr-right">
+    <div class="cur" role="group" aria-label="Currency">
+      <button data-cur="USD">USD</button><button data-cur="INR">INR</button><button data-cur="MVR">MVR</button>
+    </div>
+    <button class="icon-btn search-btn" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+    <button class="icon-btn cart-btn" aria-label="Open bag"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg><span class="cart-count">0</span></button>
+    <a href="#shop" class="pill pill-solid shop-now">Shop now</a>
+  </div>
+</header>
+<div class="search-bar" hidden><input type="search" placeholder="Search tees, denim, hoodies…" aria-label="Search products"></div>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow" data-site="hero.eyebrow">Spring / Summer ’26 · Edition 01</p>
+      <h1 class="display" data-site-rich="hero.headline">Soft <em>blue</em> everyday.</h1>
+      <p class="lede" data-site="hero.subtext">Considered essentials in calm tones — cut slow, stitched to last, curated by Lisa Marak.</p>
+      <div class="cta-row"><a href="#shop" class="pill pill-solid">Shop the edit</a><a href="#story" class="pill pill-line">Explore the jacket ↓</a></div>
+    </div>
+  </section>
+
+  <!-- PINNED STORY -->
+  <section class="story" id="story">
+    <div class="stage">
+      <div class="bg-word" aria-hidden="true">Blub</div>
+      <img class="ribbons" src="assets/ribbons.svg" alt="" aria-hidden="true">
+      <div class="product-wrap">
+        <div class="frame"><img class="hero-item" src="assets/hero-jacket.svg" alt="Flagship product"></div>
+        <img class="podium" src="assets/podium.svg" alt="" aria-hidden="true">
+      </div>
+      <div class="specs"></div>
+      <div class="story-end">
+        <p class="eyebrow story-name">The Harbour Jacket</p>
+        <p class="price-lg"><span class="story-price"></span> <small>example price</small></p>
+        <button class="pill pill-solid add story-add" data-id="">Add to bag</button>
+      </div>
+      <div class="progress"><span></span></div>
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <section class="shop" id="shop">
+    <div class="sec-head"><p class="eyebrow">The Edit</p><h2 class="display-md">Pieces to live in</h2><p class="muted">All prices are example prices, shown in <span class="cur-name">USD</span>.</p></div>
+    <div class="grid" id="grid"><p class="muted load-msg">Loading products…</p></div>
+    <p class="no-results" hidden>No pieces match that search.</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-card">
+      <img src="assets/mark.svg" alt="" class="about-mark">
+      <div>
+        <p class="eyebrow">About Blubstore</p>
+        <h2 class="display-md" data-site-rich="about.heading">Owned &amp; curated by <em>Lisa Marak</em>.</h2>
+        <div class="about-text"><p>Blubstore is owned and curated by Lisa Marak.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="news">
+    <h2 class="display-md">Join the Blub letter</h2>
+    <p class="muted">New drops, restocks and the occasional styling note. No spam.</p>
+    <form class="news-form" novalidate>
+      <input type="email" required placeholder="you@email.com" aria-label="Email address">
+      <button class="pill pill-solid" type="submit">Subscribe</button>
+    </form>
+    <p class="news-msg" aria-live="polite"></p>
+  </section>
+</main>
+
+<footer class="ftr">
+  <div><img src="assets/logo.svg" alt="Blubstore" width="150" height="31"><p class="muted">Soft-blue essentials. Owned by Lisa Marak.</p></div>
+  <div><h4>Shop</h4><a href="#shop">All pieces</a><a href="#story">The Harbour Jacket</a></div>
+  <div><h4>Help</h4><a href="#checkout" class="open-checkout">Checkout</a><a href="mailto:lisamarak219@gmail.com">Contact</a></div>
+  <p class="copy">© <span id="yr"></span> Blubstore. All prices shown are examples.</p>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="overlay" hidden></div>
+<aside class="drawer" aria-label="Shopping bag" aria-hidden="true">
+  <div class="drawer-head"><h3>Your bag</h3><button class="icon-btn close-drawer" aria-label="Close bag">✕</button></div>
+  <ul class="cart-lines"></ul>
+  <p class="cart-empty">Your bag is empty.</p>
+  <div class="drawer-foot">
+    <div class="total-row"><span>Total <small class="cur-name muted">USD</small></span><strong class="cart-total">$0.00</strong></div>
+    <button class="pill pill-solid w100 go-checkout">Checkout</button>
+    <button class="pill pill-line w100 close-drawer">Keep shopping</button>
+  </div>
+</aside>
+
+<!-- CHECKOUT -->
+<div class="modal" id="checkout" hidden role="dialog" aria-modal="true" aria-labelledby="co-title">
+  <div class="modal-card">
+    <button class="icon-btn close-modal" aria-label="Close checkout">✕</button>
+    <h3 id="co-title" class="display-sm">Checkout</h3>
+    <p class="note">Lisa will confirm each order personally by email or phone before anything is charged or shipped.</p>
+    <div class="co-summary"></div>
+    <form class="co-form" action="https://formsubmit.co/lisamarak219@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New Blubstore order">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="thank-you.html">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="Order items">
+      <input type="hidden" name="Item count">
+      <input type="hidden" name="Currency">
+      <input type="hidden" name="Order total">
+      <label>Full name<input name="Name" required autocomplete="name"></label>
+      <div class="row2">
+        <label>Phone<input name="Phone" type="tel" required autocomplete="tel"></label>
+        <label>Email<input name="email" type="email" required autocomplete="email"></label>
+      </div>
+      <label>Delivery address<textarea name="Delivery address" rows="3" required autocomplete="street-address"></textarea></label>
+      <fieldset><legend>Payment method</legend>
+        <label class="radio"><input type="radio" name="Payment method" value="Cash on delivery" required checked> Cash on delivery</label>
+        <label class="radio"><input type="radio" name="Payment method" value="Bank transfer"> Bank transfer <small>(details sent when Lisa confirms)</small></label>
+      </fieldset>
+      <label>Notes<textarea name="Notes" rows="2" placeholder="Sizes, delivery times, anything else"></textarea></label>
+      <button type="submit" class="pill pill-solid w100">Place order</button>
+      <p class="co-err" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+
+<div class="toast" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

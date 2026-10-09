@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "eyebrow": "Spring / Summer ’26 · Edition 01",
+    "headline": "Soft *blue* everyday.",
+    "subtext": "Considered essentials in calm tones — cut slow, stitched to last, curated by Lisa Marak."
+  },
+  "story": {
+    "productId": "jacket",
+    "image": "assets/products/hero-jacket.png",
+    "specs": [
+      {"title":"Fabric","text":"12oz brushed cotton twill, garment-washed for a broken-in hand from day one."},
+      {"title":"Fit","text":"Relaxed through the body, dropped shoulder, cropped just above the hip."},
+      {"title":"Stitching","text":"Triple-needle seams and bar-tacked stress points. Built for years, not seasons."},
+      {"title":"Details","text":"Brass two-way zip, corduroy collar, twin chest pockets, ribbed cuffs."}
+    ]
+  },
+  "about": {
+    "heading": "Owned & curated by *Lisa Marak*.",
+    "paragraphs": [
+      "Blubstore started with a simple idea: a wardrobe should feel like a calm morning. Lisa Marak hand-picks every piece for fabric, fit and finish — fewer things, chosen well, in soft colours that work together.",
+      "Every order is personally confirmed by Lisa by email or phone before it ships."
+    ]
+  }
+}
